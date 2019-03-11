@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title SurveyorTest
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = content_for :stylesheets_includes
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    = render partial: "partials/flash"
+    = yield
+
+    = content_for :javascript_includes

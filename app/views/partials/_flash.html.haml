@@ -1,0 +1,8 @@
+- flash.each do |level, messages|
+  %div{ class: "alert-panel #{ flash_class(level) }", role: 'alert' }
+    %button.close{"aria-label" => "Close", "data-dismiss" => "alert", type: "button"}
+      %span{"aria-hidden" => "true"} ×
+    - messages = [messages] if messages.class == String
+    - if messages.present?
+      - messages.each do |msg|
+        = (raw msg.last.match(/\.$/) ? "#{msg}<br/>" : "#{msg}.<br/>") if msg.present?

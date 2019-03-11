@@ -5,8 +5,10 @@ ruby '2.6.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
+# Use postgres as the database for Active Record
+gem 'pg'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -36,15 +38,22 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
-gem 'surveyor', git: 'https://github.com/Tzolkin/surveyor.git', branch: 'rails-5-multitenant'
+gem 'surveyor', git: 'https://github.com/HeHStudy/surveyor.git', branch: 'rails-5-multitenant'
 
 gem 'bcrypt', '~> 3.1.7'
 gem 'record_tag_helper', '~> 1.0'
+
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
+gem 'jquery-rails'
+gem 'haml'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   # gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-rails'
+  gem "better_errors"
+  gem "binding_of_caller"
 end
 
 group :development do
