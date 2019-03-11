@@ -43,7 +43,7 @@ gem 'surveyor', git: 'https://github.com/HeHStudy/surveyor.git', branch: 'rails-
 gem 'bcrypt', '~> 3.1.7'
 gem 'record_tag_helper', '~> 1.0'
 
-gem 'bootstrap-sass', '~> 3.2.0'
+gem 'bootstrap-sass', '>= 3.4.1'
 gem 'autoprefixer-rails'
 gem 'jquery-rails'
 gem 'haml'
